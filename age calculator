@@ -1,0 +1,5 @@
+name = input('Enter your name => ')
+print ('Hey', name+'!')
+birth_year = int(input('When you were born? => '))
+age = 2019 - birth_year
+print (name, 'is', age, 'years old')
