@@ -1,0 +1,29 @@
+print ('\n*** First assignment calculator ***\n')
+
+x = int(input('Please enter the first number => '))
+y = int(input('Please enter the second number => '))
+
+print ('''
+
+Press 1 for addition
+Press 2 for subtraction
+Press 3 for multiplication
+Press 4 for division
+''')
+
+operation = input('=> ')
+
+if operation =='1':
+    print (x ,'+', y, '=', x+y)
+
+elif operation =='2':
+    print (x ,'-', y, '=', x-y)
+
+elif operation =='3':
+    print (x ,'*', y, '=', x*y)
+
+elif operation =='4':
+    print (x ,'/', y, '=', x/y)
+
+else:
+    print ("Math error")
