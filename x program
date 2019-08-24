@@ -1,0 +1,17 @@
+'''
+Explenation:
+You're looping through all the rows in the outer loop, then all the columns or cells in the inner. 
+Then if clause checks whether you're on a diagonal.
+The comma after the print statement ensures you don't get a new line every print. 
+The 3rd print gives you a new line once you're finished with that row.
+'''
+
+N = int(input('Enter a number => '))
+
+for i in range(N):
+    for j in range(N):
+        if (i == j) or ((N - j -1) == i):
+            print('*', end = '')
+        else:
+            print(' ', end = '')
+    print('')
