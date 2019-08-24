@@ -1,0 +1,46 @@
+print ('\n*** Second assignment calculator ***\n')
+
+list = []
+
+while True:
+    x = int(input('Please enter the first number => '))
+    y = int(input('Please enter the second number => '))
+
+    print ('''
+    
+    Press 1 for addition
+    Press 2 for subtraction
+    Press 3 for multiplication
+    Press 4 for division
+    Press q for quit
+    Press l for calculation history
+    ''')
+
+
+    operation = input('=> ')
+
+    if operation =='1':
+        print (x ,'+', y, '=', x+y,'\n')
+        list.append(x+y)
+
+    elif operation =='2':
+        print (x ,'-', y, '=', x-y,'\n')
+        list.append(x-y)
+
+    elif operation =='3':
+        print (x ,'*', y, '=', x*y,'\n')
+        list.append(x*y)
+
+    elif operation =='4':
+        print (x ,'/', y, '=', x/y,'\n')
+        list.append(x/y)
+
+    elif operation =='q':
+        print ('Bye!')
+        break
+
+    elif operation =='l':
+        print (list,'\n')
+
+    else:
+        print ("Math error",'\n')
