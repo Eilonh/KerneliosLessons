@@ -1,0 +1,21 @@
+# Pick a number
+import random
+
+tries = 2
+number = random.randint(1,10)
+print(number)
+
+while True:
+    pick = int(input('Choose a number from 1 to 10 => '))
+    if pick == number:
+        print ('You won!')
+        break
+
+    elif tries == 0:
+        print ('No more tries; better luck next time...\n')
+        break
+
+    else:
+        print ('Try again...')
+        print ('you have',tries, 'tries left\n' )
+        tries = tries - 1
