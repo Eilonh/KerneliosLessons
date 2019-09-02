@@ -1,0 +1,29 @@
+import random
+
+card1 = random.randint(1,10)
+card2 = random.randint(1,10)
+
+list = []
+
+list.append(card1)
+list.append(card2)
+
+print ('You got:')
+print (card1, card2)
+
+while True:
+    if sum(list) > 21:
+        print('Total cards are over 21, you lose!')
+        quit()
+
+    another = input ('Draw another card? => ').lower()
+    if another == 'y':
+        card = random.randint(1,10)
+        list.append(card)
+        print('_____________________')
+        print('\nYou got:')
+        print (list)
+
+    else:
+        print ('Total cards is', sum(list))
+        break
