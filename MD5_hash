@@ -1,0 +1,5 @@
+import hashlib
+
+string = input('Enter string to hash: ')
+hash = hashlib.md5(string.encode())
+print(hash.hexdigest())
