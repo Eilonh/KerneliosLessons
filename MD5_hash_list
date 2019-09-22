@@ -1,0 +1,22 @@
+import hashlib
+import time
+
+hash_count = 0
+
+passList = open('<file_path>') # Open and reads the plaintext lists
+
+
+def make_hash():
+    for password in passList:
+        print (password, end ='')
+        hash = hashlib.md5(password.encode().strip())   # converting the string to MD5
+        print (hash.hexdigest(),'\n')
+        time.sleep(0.3)
+        global hash_count
+        hash_count += 1    # Add + 1 to count the number of hashes
+
+
+print ('__________Start!__________\n')
+make_hash()
+print ('Total', hash_count, 'hashes converted\n')
+print ('__________Done!__________')
