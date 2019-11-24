@@ -4,9 +4,7 @@ import requests
 print ("The MAC address is : ", end="")
 mac = (':'.join(re.findall('..', '%012x' % uuid.getnode())))
 print (mac)
-
-r = requests.post('https://dnschecker.org/ajax_files/mac_lookup.php', data={
-    'mac_add' : mac})
-
-getVendor = re.findall('name\":\"([\w\s]*)', r.text)
-print ('This script run on',getVendor)
+if '00' in mac:
+    print ('vm')
+else:
+    print ('not vm')
