@@ -1,4 +1,4 @@
-import time
+iimport time
 
 code = '10010110010110110'
 
@@ -16,6 +16,10 @@ Y88b  d88P Y88..88P Y88..88P Y88b 888         888 Y88..88P 888 d88P  "
                                              d88P                       
                                            888P"                        
 '''
+counter = 0
+
+print ('You have 5 attempts to guess the currect number...')
+
 while True:
     try:
         answer = int(input('What is the code? => '))
@@ -27,7 +31,16 @@ while True:
                 print (i, end='')
                 time.sleep (0.01)
 
+            break
+
         else:
-            print ('Try again!')
+            print ('\nTry again!')
+            counter += 1
+            print ('Attempt number:',counter)
+            if counter >= 5:
+              print ('Too many attempts...')
+              break
+
+
     except:
-        print ('Try again!')
+        print ('Please enter a number')
