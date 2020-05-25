@@ -1,0 +1,46 @@
+import time
+
+code = '10010110010110110'
+
+ascii = '''
+
+ .d8888b.                         888         d8b          888      888 
+d88P  Y88b                        888         Y8P          888      888 
+888    888                        888                      888      888 
+888         .d88b.   .d88b.   .d88888        8888  .d88b.  88888b.  888 
+888  88888 d88""88b d88""88b d88" 888        "888 d88""88b 888 "88b 888 
+888    888 888  888 888  888 888  888         888 888  888 888  888 Y8P 
+Y88b  d88P Y88..88P Y88..88P Y88b 888         888 Y88..88P 888 d88P  "  
+ "Y8888P88  "Y88P"   "Y88P"   "Y88888         888  "Y88P"  88888P"  888 
+                                              888                       
+                                             d88P                       
+                                           888P"                        
+'''
+counter = 0
+
+print ('You have 5 attempts to guess the currect number...')
+
+while True:
+    try:
+        answer = int(input('What is the code? => '))
+
+        final_code = int(code, 2)
+
+        if answer == final_code:
+            for i in ascii:
+                print (i, end='')
+                time.sleep (0.01)
+
+            break
+
+        else:
+            print ('\nTry again!')
+            counter += 1
+            print ('Attempt number:',counter)
+            if counter >= 5:
+              print ('Too many attempts...')
+              break
+
+
+    except:
+        print ('Please enter a number')
